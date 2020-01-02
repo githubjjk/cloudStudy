@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd9cc501-79da-41fd-a5cd-e7b95fcd644d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/cs-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,11 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="35" column="205" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="205" />
+            <state relative-caret-position="189">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cs-utils/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="18" column="63" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -37,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cs-utils/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="380">
+              <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -76,13 +86,13 @@
         <option value="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/CsUtilsApplication.java" />
         <option value="$PROJECT_DIR$/cs-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/../myCloudcConfig/cs-utils-dev.yml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/port.json" />
         <option value="$PROJECT_DIR$/cs-server/pom.xml" />
         <option value="$PROJECT_DIR$/cs-auth/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/cs-auth/pom.xml" />
         <option value="$PROJECT_DIR$/cs-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/cs-utils/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -104,22 +114,17 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
-    <option name="enabledProfiles">
-      <list>
-        <option value="dev" />
-      </list>
-    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="cs-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="cloudStudy" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="cs-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="cloudStudy" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -138,8 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,10 +150,38 @@
               <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
               <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="cs-utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="cs-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="cs-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="cs-utils" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -269,19 +300,21 @@
       <workItem from="1577845120262" duration="12780000" />
       <workItem from="1577926631033" duration="9000" />
       <workItem from="1577926663725" duration="2639000" />
-      <workItem from="1577929652523" duration="2070000" />
+      <workItem from="1577929652523" duration="2666000" />
+      <workItem from="1577934456047" duration="1417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36248000" />
+    <option name="totallyTimeSpent" value="38261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4887097" visible="true" weight="0.15724947" />
+      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.4870968" visible="true" weight="0.15724947" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -291,12 +324,11 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34561214" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="10" sideWeight="0.5112903" side_tool="true" visible="true" weight="0.15724947" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="10" sideWeight="0.5129032" side_tool="true" visible="true" weight="0.15724947" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Spring" order="7" />
@@ -306,6 +338,7 @@
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -544,13 +577,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../myCloudcConfig/publicDevConfig.yml" />
     <entry file="file://$PROJECT_DIR$/cs-config/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/cs-utils/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/CsUtilsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -588,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="35" column="205" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="205" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cs-auth/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -625,8 +644,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cs-utils/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="380">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cs-utils/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="18" column="63" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
         </state>
       </provider>
     </entry>
