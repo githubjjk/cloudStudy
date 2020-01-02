@@ -1,0 +1,21 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: cs-server
+eureka:
+  instance:
+    hostname: ${spring.application.name}
+    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/
+logging:
+  file:
+    path: ../login/cs-server.log
+  level:
+    ROOT: info

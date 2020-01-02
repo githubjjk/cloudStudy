@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>jjk</groupId>
+    <artifactId>cloudStudy</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+    </parent>
+
+    <modules>
+        <module>cs-auth</module>
+        <module>cs-server</module>
+        <module>cs-utils</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <mybatis-plus.version>3.3.0</mybatis-plus.version>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <env>dev</env>
+                <dataSource.url><![CDATA[jdbc:mysql://192.168.1.75:3306/mine?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull]]></dataSource.url>
+                <dataSource.username>root</dataSource.username>
+                <dataSource.password>root</dataSource.password>
+                <hikari.connection-test-query>select 1</hikari.connection-test-query>
+                <hikari.minimum-idle>5</hikari.minimum-idle>
+                <hikari.idle-timeout>180000</hikari.idle-timeout>
+                <hikari.maximum-pool-size>10</hikari.maximum-pool-size>
+                <hikari.auto-commit>true</hikari.auto-commit>
+                <redis.host>192.168.1.75</redis.host>
+                <redis.port>6379</redis.port>
+                <redis.database>1</redis.database>
+                <eureka.ipaddr>127.0.0.1</eureka.ipaddr>
+                <eureka.defaultZone>http://127.0.0.1:8888/eureka/</eureka.defaultZone>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <properties>
+                <dataSource.url><![CDATA[jdbc:mysql://192.168.1.75:3306/mine?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull]]></dataSource.url>
+                <dataSource.username>root</dataSource.username>
+                <dataSource.password>root</dataSource.password>
+                <hikari.connection-test-query>select 1</hikari.connection-test-query>
+                <hikari.minimum-idle>5</hikari.minimum-idle>
+                <hikari.idle-timeout>180000</hikari.idle-timeout>
+                <hikari.maximum-pool-size>10</hikari.maximum-pool-size>
+                <hikari.auto-commit>true</hikari.auto-commit>
+                <redis.host>192.168.1.75</redis.host>
+                <redis.port>6379</redis.port>
+                <redis.database>1</redis.database>
+                <eureka.ipaddr>127.0.0.1</eureka.ipaddr>
+                <eureka.defaultZone>http://127.0.0.1:8888/eureka/</eureka.defaultZone>
+            </properties>
+        </profile>
+    </profiles>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
