@@ -16,6 +16,6 @@ spring:
     name: cs-utils
 logging:
   file:
-    path: ../login/cs-utils.log
+    path: /login/cs-utils.log
   level:
     ROOT: info

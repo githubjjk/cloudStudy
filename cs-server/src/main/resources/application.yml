@@ -16,6 +16,6 @@ eureka:
       defaultZone: http://127.0.0.1:8888/eureka/
 logging:
   file:
-    path: ../login/cs-server.log
+    path: /login/cs-server.log
   level:
     ROOT: info

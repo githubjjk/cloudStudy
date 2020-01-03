@@ -19,6 +19,7 @@
         <module>cs-auth</module>
         <module>cs-server</module>
         <module>cs-utils</module>
+        <module>cs-gateway</module>
     </modules>
 
     <properties>
@@ -28,6 +29,8 @@
         <mybatis-plus.version>3.3.0</mybatis-plus.version>
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
     </properties>
+
+
 
     <dependencyManagement>
         <dependencies>

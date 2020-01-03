@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/cs-server/pom.xml" />
         <option value="$PROJECT_DIR$/cs-utils/pom.xml" />
         <option value="$PROJECT_DIR$/cs-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/cs-gateway/pom.xml" />
       </list>
     </option>
   </component>

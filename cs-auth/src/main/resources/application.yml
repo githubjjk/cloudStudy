@@ -4,7 +4,7 @@ server:
     context-path: /
 logging:
   file:
-    path: ../login/cs-auth.log
+    path: /login/cs-auth.log
   level:
     ROOT: info
 spring:
@@ -30,7 +30,7 @@ spring:
 eureka:
   instance:
     hostname: ${spring.application.name}
-    ip-address: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
   client:
     service-url:
       defaultZone: http://127.0.0.1:8888/eureka/
