@@ -1,0 +1,33 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /
+logging:
+  file:
+    path: /login/cs-gateway.log
+  level:
+    ROOT: info
+spring:
+  application:
+    name: cs-gateway
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    timeout: 60000
+    database: 0
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+eureka:
+  instance:
+    hostname: ${spring.application.name}
+    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/
+    fetch-registry: true
+    register-with-eureka: true
