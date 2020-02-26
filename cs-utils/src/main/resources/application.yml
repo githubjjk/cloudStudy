@@ -4,16 +4,22 @@ server:
     context-path: /
 eureka:
   instance:
-    hostname: ${spring.application.name}
-    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+    ip-address: @eureka.ipaddr@
+    prefer-ip-address: true
   client:
+    service-url:
+      defaultZone: @eureka.defaultZone@
     register-with-eureka: true
     fetch-registry: true
-    service-url:
-      defaultZone: http://127.0.0.1:8888/eureka/
 spring:
   application:
     name: cs-utils
+  redis:
+    host: @redis.host@
+    port: @redis.port@
+    database: @redis.database@
+    password: @redis.password@
+    timeout: @redis.timeout@
 logging:
   file:
     path: /login/cs-utils.log

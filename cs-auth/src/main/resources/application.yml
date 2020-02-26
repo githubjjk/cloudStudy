@@ -11,29 +11,29 @@ spring:
   application:
     name: cs-auth
   redis:
-    host: 127.0.0.1
-    port: 6379
-    database: 0
-    password: 123456
-    timeout: 60000
+    host: @redis.host@
+    port: @redis.port@
+    database: @redis.database@
+    password: @redis.password@
+    timeout: @redis.timeout@
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/mine?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
-    username: root
-    password: 123456
+    driver-class-name: @dataSource.driverClass@
+    url: @dataSource.url@
+    username: @dataSource.username@
+    password: @dataSource.password@
     dbcp2:
-      initial-size: 10
-      min-idle: 10
-      max-idle: 30
-      max-wait-millis: 60000
+      initial-size: @dbcp2.initialSize@
+      min-idle: @dbcp2.minIdle@
+      max-idle: @dbcp2.maxIdle@
+      max-wait-millis: @dbcp2.maxWaitMillis@
       validation-query: SELECT 1 FROM DUAL
 eureka:
   instance:
-    hostname: ${spring.application.name}
-    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+    ip-address: @eureka.ipaddr@
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8888/eureka/
+      defaultZone: @eureka.defaultZone@
     register-with-eureka: true
     fetch-registry: true
 

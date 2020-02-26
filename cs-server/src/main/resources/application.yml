@@ -7,13 +7,13 @@ spring:
     name: cs-server
 eureka:
   instance:
-    hostname: ${spring.application.name}
-    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+    ip-address: @eureka.ipaddr@
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://127.0.0.1:8888/eureka/
+      defaultZone: @eureka.defaultZone@
 logging:
   file:
     path: /login/cs-server.log

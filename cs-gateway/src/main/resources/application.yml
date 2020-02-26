@@ -11,23 +11,29 @@ spring:
   application:
     name: cs-gateway
   redis:
-    host: 127.0.0.1
-    port: 6379
-    password: 123456
-    timeout: 60000
-    database: 0
+    host: @redis.host@
+    port: @redis.port@
+    database: @redis.database@
+    password: @redis.password@
+    timeout: @redis.timeout@
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
 eureka:
   instance:
-    hostname: ${spring.application.name}
-    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+    ip-address: @eureka.ipaddr@
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8888/eureka/
+      defaultZone: @eureka.defaultZone@
     fetch-registry: true
     register-with-eureka: true
