@@ -24,13 +24,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     @Autowired
     private Gson gson;
+
     @Autowired
     private RedisService redisService;
 
 
+
     @RequestMapping("/login")
     public String login(@RequestBody String json){
-        redisService.getVal("jjk");
+        String jjk = redisService.getVal("jjk");
         if(StringUtils.isNotEmpty(json)){
             Admin admin = gson.fromJson(json, Admin.class);
             if(null!=admin){
