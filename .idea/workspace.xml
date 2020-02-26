@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd9cc501-79da-41fd-a5cd-e7b95fcd644d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudStudy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,8 +39,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cs-auth/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+            <state relative-caret-position="263">
+              <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -49,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cs-gateway/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="70" column="28" lean-forward="true" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+            <state relative-caret-position="349">
+              <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -67,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CsAuthApplication.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CsAuthApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="114">
+              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,8 +96,11 @@
       <file leaf-file-name="CsGatewayApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="114">
+              <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,13 +185,13 @@
         <option value="$PROJECT_DIR$/cs-utils/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/CsUtilsApplication.java" />
-        <option value="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" />
         <option value="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/RedisService.java" />
-        <option value="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" />
-        <option value="$PROJECT_DIR$/cs-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/cs-server/pom.xml" />
         <option value="$PROJECT_DIR$/cs-utils/pom.xml" />
         <option value="$PROJECT_DIR$/cs-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" />
+        <option value="$PROJECT_DIR$/cs-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" />
       </list>
     </option>
   </component>
@@ -245,70 +253,6 @@
             <path>
               <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
               <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jjk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jjk" type="462c0819:PsiDirectoryNode" />
-              <item name="csauth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jjk" type="462c0819:PsiDirectoryNode" />
-              <item name="csauth" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cloudStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="cs-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cloudStudy" type="b2602c69:ProjectViewProjectNode" />
@@ -392,7 +336,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hycloudgit/hycloud-commons" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -528,12 +472,12 @@
       <workItem from="1582524344796" duration="5332000" />
       <workItem from="1582553278508" duration="1506000" />
       <workItem from="1582594060475" duration="5849000" />
-      <workItem from="1582685201623" duration="1532000" />
+      <workItem from="1582685201623" duration="3554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133300000" />
+    <option name="totallyTimeSpent" value="135322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -559,8 +503,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.29685807" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32827735" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26972282" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32827735" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26972282" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -860,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/RedisService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -895,16 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cs-utils/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -921,15 +848,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cs-auth/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+        <state relative-caret-position="263">
+          <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cs-gateway/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="70" column="28" lean-forward="true" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+        <state relative-caret-position="349">
+          <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
