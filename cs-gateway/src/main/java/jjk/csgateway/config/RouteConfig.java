@@ -1,6 +1,7 @@
 package jjk.csgateway.config;
 
 import com.fasterxml.jackson.core.filter.TokenFilter;
+import jjk.csgateway.filter.LoginFilter;
 import jjk.csgateway.service.SpringContextService;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
@@ -18,12 +19,13 @@ public class RouteConfig {
 
     @Bean
     public RouteLocator routeLocator(RouteLocatorBuilder builder){
-
+        LoginFilter loginFilter = SpringContextService.getBean("loginFilter");
 
         return builder.routes()
                 .route("Auth",p -> p
                         .path("/auth/**")
-                        .filters(f -> f.stripPrefix(1))
+                        .filters(f -> f
+                                .stripPrefix(1))
                         .uri("lb://cs-auth")
                 )
                 .build();

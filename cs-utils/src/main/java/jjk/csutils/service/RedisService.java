@@ -33,6 +33,9 @@ public class RedisService {
     public String getVal(String key) {
         ValueOperations vot = this.redisTemplate.opsForValue();
         Object o = vot.get(key);
-        return o.toString();
+        if(null!=o){
+            return o.toString();
+        }
+        return "";
     }
 }

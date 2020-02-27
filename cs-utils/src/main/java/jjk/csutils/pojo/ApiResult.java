@@ -1,5 +1,6 @@
 package jjk.csutils.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.google.gson.Gson;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -24,20 +25,6 @@ public class ApiResult<T> {
     //数据
     private T data;
 
-    /**
-     * 获取序列化数据
-     * @return
-     */
-    public byte[] getByte(){
-        Gson gson = new Gson();
-        byte[] result=null;
-        try {
-            result=gson.toJson(this).getBytes("UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
 
     public ApiResult(int state,String msg,T data){
         this.state=state;

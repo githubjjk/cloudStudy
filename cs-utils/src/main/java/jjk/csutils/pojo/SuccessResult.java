@@ -13,12 +13,8 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class SuccessResult<T> extends ApiResult<T> {
 
-    public SuccessResult(int state,String msg,T data){
-        super(state,msg,data);
-    }
-
-    public SuccessResult(int state,String msg){
-        super(state,msg);
+    public SuccessResult(String msg,T data){
+        super(PublicState.SUCCESS.getValue(),msg,data);
     }
 
     public SuccessResult(String msg){

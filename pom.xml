@@ -36,7 +36,7 @@
             <properties>
                 <env>dev</env>
                 <!--<dataSource.url><![CDATA[jdbc:mysql://192.168.123.1:3306/zt17?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull]]></dataSource.url>-->
-                <dataSource.url><![CDATA[jdbc:mysql://127.0.0.1:3306/toothDocter2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull]]></dataSource.url>
+                <dataSource.url>jdbc:mysql://localhost:3306/toothdocter2?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true&amp;serverTimezone=UTC</dataSource.url>
                 <dataSource.username>root</dataSource.username>
                 <dataSource.password>123456</dataSource.password>
                 <dataSource.driverClass>com.mysql.jdbc.Driver</dataSource.driverClass>
@@ -71,4 +71,11 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62</version>
+        </dependency>
+    </dependencies>
 </project>
