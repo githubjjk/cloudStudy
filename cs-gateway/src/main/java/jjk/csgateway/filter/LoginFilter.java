@@ -40,7 +40,7 @@ public class LoginFilter implements GatewayFilter {
             }
         }
         return resultNoAuth(exchange);
-    }0
+    }
 
     private Mono<Void> resultNoAuth(ServerWebExchange exchange) {
         ServerHttpResponse response = exchange.getResponse();

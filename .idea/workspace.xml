@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fd9cc501-79da-41fd-a5cd-e7b95fcd644d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/config/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/config/RouteConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ApiResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ApiResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ErrorResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ErrorResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/SuccessResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/SuccessResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/port.json" beforeDir="false" afterPath="$PROJECT_DIR$/port.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/filter/LoginFilter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,8 +72,8 @@
       <file leaf-file-name="LoginFilter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/filter/LoginFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+            <state relative-caret-position="198">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -641,12 +632,12 @@
       <workItem from="1582553278508" duration="1506000" />
       <workItem from="1582594060475" duration="5849000" />
       <workItem from="1582685201623" duration="9357000" />
-      <workItem from="1582769899602" duration="14715000" />
+      <workItem from="1582769899602" duration="15020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155840000" />
+    <option name="totallyTimeSpent" value="156145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1074,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/filter/LoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+        <state relative-caret-position="198">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
