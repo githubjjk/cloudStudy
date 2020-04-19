@@ -4,9 +4,9 @@ public enum PublicState {
     //请求成功
     SUCCESS(0),
     //业务错误
-    BUSSINSERROR(1),
+    BUSSINS_ERROR(1),
     //鉴权失败
-    AUTHFAILURE(2),
+    AUTH_FAILURE(2),
     //未发现资源
     NOT_FOUND(3);
 

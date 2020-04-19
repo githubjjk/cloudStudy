@@ -1,11 +1,7 @@
 package jjk.csutils.pojo;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.google.gson.Gson;
 import lombok.Data;
 import lombok.experimental.Accessors;
-
-import java.io.UnsupportedEncodingException;
 
 /**
  * @author: jjk
@@ -26,15 +22,15 @@ public class ApiResult<T> {
     private T data;
 
 
-    public ApiResult(int state,String msg,T data){
-        this.state=state;
-        this.msg=msg;
-        this.data=data;
+    public ApiResult(int state, String msg, T data) {
+        this.state = state;
+        this.msg = msg;
+        this.data = data;
     }
 
-    public ApiResult(int state,String msg){
-        this.state=state;
-        this.msg=msg;
+    public ApiResult(int state, String msg) {
+        this.state = state;
+        this.msg = msg;
     }
 
 }

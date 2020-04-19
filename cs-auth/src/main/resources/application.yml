@@ -27,6 +27,16 @@ spring:
       max-idle: @dbcp2.maxIdle@
       max-wait-millis: @dbcp2.maxWaitMillis@
       validation-query: SELECT 1 FROM DUAL
+  jpa:
+    database: mysql
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
 eureka:
   instance:
     ip-address: @eureka.ipaddr@

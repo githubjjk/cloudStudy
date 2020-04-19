@@ -1,12 +1,15 @@
 package jjk.csgateway.filter;
 
+import com.alibaba.fastjson.JSONObject;
 import jjk.csutils.pojo.ErrorResult;
 import jjk.csutils.pojo.PublicState;
 import jjk.csutils.service.RedisService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -16,6 +19,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.annotation.Annotation;
 
 /**
  * @author: jjk
@@ -24,8 +28,8 @@ import java.io.UnsupportedEncodingException;
  * @description: 登录鉴权
  */
 @Component
-public class LoginFilter implements GatewayFilter {
-
+@Slf4j
+public class LoginFilter implements GatewayFilter, Order {
 
     @Autowired
     private RedisService redisService;
@@ -35,7 +39,8 @@ public class LoginFilter implements GatewayFilter {
         String accessToken = exchange.getRequest().getHeaders().getFirst("AccessToken");
         if (StringUtils.isNotEmpty(accessToken)) {
             String cacheToken = redisService.getVal(accessToken);
-            if (StringUtils.isNotEmpty(cacheToken)){
+            if (StringUtils.isNotEmpty(cacheToken)) {
+                redisService.setKeyValTime(accessToken,cacheToken,1800);
                 return chain.filter(exchange);
             }
         }
@@ -52,11 +57,21 @@ public class LoginFilter implements GatewayFilter {
         response.setStatusCode(HttpStatus.UNAUTHORIZED);
         byte[] resultByte = new byte[0];
         try {
-            resultByte = new ErrorResult(PublicState.AUTHFAILURE.getValue(), "需要登录").toString().getBytes("UTF-8");
+            resultByte = JSONObject.toJSONString(new ErrorResult(PublicState.AUTH_FAILURE.getValue(), "需要登录")).getBytes("UTF-8");
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         DataBuffer wrap = response.bufferFactory().wrap(resultByte);
         return response.writeWith(Mono.just(wrap));
+    }
+
+    @Override
+    public Class<? extends Annotation> annotationType() {
+        return null;
+    }
+
+    @Override
+    public int value() {
+        return 1;
     }
 }

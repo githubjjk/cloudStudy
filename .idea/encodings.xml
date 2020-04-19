@@ -3,9 +3,12 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cs-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cs-auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cs-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cs-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cs-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cs-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cs-utils" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cs-utils/src/main/java" charset="UTF-8" />
   </component>
 </project>

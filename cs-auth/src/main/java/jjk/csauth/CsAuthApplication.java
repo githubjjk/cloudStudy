@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages = {"jjk.csauth","jjk.csutils.service"})
+@ComponentScan(basePackages = {"jjk.csauth","jjk.csutils"})
 public class CsAuthApplication {
 
     public static void main(String[] args) {

@@ -12,11 +12,11 @@ public class ErrorResult<T> extends ApiResult<T> {
     }
 
     public ErrorResult(String msg, T data) {
-        super(PublicState.BUSSINSERROR.getValue(), msg, data);
+        super(PublicState.BUSSINS_ERROR.getValue(), msg, data);
     }
 
     public ErrorResult(String msg) {
-        super(PublicState.BUSSINSERROR.getValue(), msg);
+        super(PublicState.BUSSINS_ERROR.getValue(), msg);
     }
 
     public ErrorResult(int state, String msg) {
