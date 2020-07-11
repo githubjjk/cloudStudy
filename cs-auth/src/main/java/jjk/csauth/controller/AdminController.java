@@ -1,8 +1,9 @@
 package jjk.csauth.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import jjk.csauth.dao.AdminDao;
-import jjk.csauth.dao.RoleDao;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import jjk.csauth.dao.AdminMapper;
+import jjk.csauth.dao.RoleMapper;
 import jjk.csauth.pojo.Admin;
 import jjk.csauth.pojo.AdminRes;
 import jjk.csauth.pojo.Role;
@@ -18,7 +19,6 @@ import jjk.csutils.service.ObjectUtils;
 import jjk.csutils.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,13 +36,13 @@ import java.util.*;
 @Slf4j
 public class AdminController {
     @Autowired
-    private AdminDao adminDao;
+    private AdminMapper adminMapper;
     @Autowired
     private AdminService adminService;
     @Autowired
     private RedisService redisService;
     @Autowired
-    private RoleDao roleDao;
+    private RoleMapper roleMapper;
 
     /**
      * 保存修改用户
@@ -57,20 +57,23 @@ public class AdminController {
         if (ObjectUtils.checkObjNotNull(admin, (ArrayList<String>) prop)) {
             try {
                 String password = "";
-                boolean adminExist = adminDao.exists(Example.of(new Admin().setUsername(admin.getUsername())));
-                if (adminExist) {
+                QueryWrapper<Admin> qw = new QueryWrapper<>();
+                qw.eq("username", admin.getUsername());
+                qw.eq("enable", "0");
+                Integer adminExist = adminMapper.selectCount(qw);
+                if (adminExist > 0) {
                     return new ErrorResult("用户名重复");
                 }
-                if (null != admin.getPassword() && !admin.equals("")) {
-                    //新增
-                    password = Base64Utils.encodeToString((admin.getUsername() + "123456").getBytes("UTF-8"));
+                if (null == admin.getId()) {
+                    if (null != admin.getPassword()) {
+                        //新增
+                        password = Base64Utils.encodeToString((admin.getUsername() + "123456").getBytes("UTF-8"));
+                    } else {
+                        password = Base64Utils.encodeToString((admin.getUsername() + admin.getPassword()).getBytes("UTF-8"));
+                    }
                     admin.setPassword(password);
-                    adminDao.save(admin);
-                    return new SuccessResult("保存成功！！");
                 }
-                password = Base64Utils.encodeToString((admin.getUsername() + admin.getPassword()).getBytes("UTF-8"));
-                admin.setPassword(password);
-                adminDao.save(admin);
+                admin.insertOrUpdate();
                 return new SuccessResult("保存成功！！");
             } catch (UnsupportedEncodingException e) {
                 log.error(e.getMessage());
@@ -103,7 +106,7 @@ public class AdminController {
         if (id.intValue() == 1) {
             return new ErrorResult("不能删除超级管理员！");
         }
-        adminDao.deleteById(id);
+        adminMapper.deleteById(id);
         return new SuccessResult("删除成功");
     }
 
@@ -167,26 +170,30 @@ public class AdminController {
         List<String> strings = ObjectUtils.setArrayList("rid", "aids");
         if (ObjectUtils.checkObjNotNull(roleAdmins, (ArrayList<String>) strings)) {
             List<Integer> aids = roleAdmins.getAids();
-            Role role = roleDao.findById(roleAdmins.getRid()).orElse(null);
+            Role role = roleMapper.selectById(roleAdmins.getRid());
             if (null != role) {
-                Set<Admin> admins = role.getAdmins();
-                if (null != admins && admins.size() > 0) {
-                    for (Admin admin : admins) {
-                        admin.setRole(null);
-                        adminDao.save(admin);
-                    }
-                }
-                for (int aid : aids) {
-                    Admin admin2 = adminDao.findById(aid).orElse(null);
-                    if (null != admin2) {
-                        admin2.setRole(role);
-                        adminDao.save(admin2);
-                    }
+                for (int i = 0; i < aids.size(); i++) {
+                    Admin admin = new Admin().setId(aids.get(i)).setRid(role.getRid());
+                    admin.updateById();
                 }
                 return new SuccessResult<>("关联成功");
             }
             return new ErrorResult<>("参数有误");
         }
         return new ErrorResult("参数不能为空！！");
+    }
+
+    /**
+     * 根据username查找用户
+     *
+     * @param username
+     * @return
+     */
+    @GetMapping("/findAdminByUserName/{username}")
+    public ApiResult findAdminById(@PathVariable("username") String username) {
+        QueryWrapper<Admin> aq = new QueryWrapper<>();
+        aq.eq("username", username);
+        Admin admin = adminMapper.selectOne(aq);
+        return new SuccessResult<>(admin);
     }
 }

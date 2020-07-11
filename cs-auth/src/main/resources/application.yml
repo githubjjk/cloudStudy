@@ -4,7 +4,7 @@ server:
     context-path: /
 logging:
   file:
-    path: /login/cs-auth.log
+    path: /log/cs-auth.log
   level:
     ROOT: info
 spring:
@@ -27,16 +27,17 @@ spring:
       max-idle: @dbcp2.maxIdle@
       max-wait-millis: @dbcp2.maxWaitMillis@
       validation-query: SELECT 1 FROM DUAL
-  jpa:
-    database: mysql
-    open-in-view: true
-    hibernate:
-      ddl-auto: update
-      naming:
-        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      column-underline: true
+      db-type: mysql
+    refresh: false
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
 eureka:
   instance:
     ip-address: @eureka.ipaddr@

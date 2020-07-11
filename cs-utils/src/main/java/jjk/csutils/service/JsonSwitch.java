@@ -64,9 +64,20 @@ public class JsonSwitch {
      * @param key
      * @return
      */
-    public static Object getJsonByKey(String json,String key){
+    public static Object getJsonByKey(String json, String key) {
         JSONObject jsonObject = JSONObject.parseObject(json);
         Object o = jsonObject.get(key);
         return o;
+    }
+
+    /**
+     * 对象转换为json字符串
+     *
+     * @param obj
+     * @return
+     */
+    public static String getJsonString(Object obj) {
+        String s = JSONObject.toJSONString(obj);
+        return s;
     }
 }

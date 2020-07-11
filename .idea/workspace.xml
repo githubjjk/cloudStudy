@@ -20,28 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd9cc501-79da-41fd-a5cd-e7b95fcd644d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/CsAuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/mapper/LoginMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/ResourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/LoginDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/ResourceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/ResourceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/ResourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/RoleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/CsGatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/config/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/config/RouteConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/constants/PublicState.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/constants/PublicState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ApiResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ApiResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ErrorResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ErrorResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/PublicState.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/PublicState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/RedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/MyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/MyPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/JsonSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/JsonSwitch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/port.json" beforeDir="false" afterPath="$PROJECT_DIR$/port.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,16 +64,10 @@
         <option value="Enum" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>redis</find>
-      <find>mybatis</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,10 +97,12 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/sample/MscDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cs-public-component/src/main/java/jjk/cspubliccomponent/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -108,6 +111,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -115,22 +121,164 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\项目\javaProject\cloudStudy\cs-public-component\src\main\java\jjk\cspubliccomponent\config" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="jjk.csutils.pojo" />
-      <recent name="jjk.csauth.pojo" />
-      <recent name="jjk.csutils.service" />
-      <recent name="jjk.csgateway.service" />
+      <recent name="jjk.cspubliccomponent.webSocket" />
+      <recent name="jjk.cspubliccomponent.config" />
+      <recent name="jjk.cscar.exception" />
+      <recent name="jjk.cscar.config" />
+      <recent name="jjk.csauth.config" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="jjk.csutils.service.serviceImpl" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CsGatewayApplication">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8083/findMachineTree" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8082/api/machine/saveMachine" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="AccessToken" />
+                <option name="value" value="amlqaWFuZ2t1bmFtbHFhV0Z1WjJ0MWJqRXlNelExTmc9PTAuMzMxMTk2NDI2MDE1ODMzMw==" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&#9;&quot;name&quot;:&quot;1&quot;,&#10;&#9;&quot;icon&quot;:&quot;1&quot;,&#10;&#9;&quot;parentId&quot;:&quot;-1&quot;,&#10;&#9;&quot;longitude&quot;:&quot;1&quot;,&#10;&#9;&quot;latitude&quot;:&quot;1&quot;,&#10;&#9;&quot;type&quot;:&quot;1&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8082/api/auth/login" />
+          <option name="urlPath" value="" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;username&quot;:&quot;jijiangkun&quot;,&#10;&quot;password&quot;:&quot;amlqaWFuZ2t1bjEyMzQ1Ng==&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8082/api/machine/saveMachine" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="AccessToken" />
+                <option name="value" value="amlqaWFuZ2t1bmFtbHFhV0Z1WjJ0MWJqRXlNelExTmc9PTAuNDY4ODUzODI5NjY1OTE2OA==" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&#9;&quot;name&quot;:&quot;1&quot;,&#10;&#9;&quot;icon&quot;:&quot;1&quot;,&#10;&#9;&quot;parentId&quot;:&quot;-1&quot;,&#10;&#9;&quot;longitude&quot;:&quot;1&quot;,&#10;&#9;&quot;latitude&quot;:&quot;1&quot;,&#10;&#9;&quot;type&quot;:&quot;1&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8083/findMachineTree.action" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8082/api/auth/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="AccessToken" />
+                <option name="value" value="amlqaWFuZ2t1bmFtbHFhV0Z1WjJ0MWJqRXlNelExTmc9PTAuNDY4ODUzODI5NjY1OTE2OA==" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&#9;&quot;name&quot;:&quot;1&quot;,&#10;&#9;&quot;icon&quot;:&quot;1&quot;,&#10;&#9;&quot;parentId&quot;:&quot;-1&quot;,&#10;&#9;&quot;longitude&quot;:&quot;1&quot;,&#10;&#9;&quot;latitude&quot;:&quot;1&quot;,&#10;&#9;&quot;type&quot;:&quot;1&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8082/api/machine/saveMachine" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="AccessToken" />
+                <option name="value" value="amlqaWFuZ2t1bmFtbHFhV0Z1WjJ0MWJqRXlNelExTmc9PTAuMjA1MTIxNzU5NTM3NTI1NjU=" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&#9;&quot;name&quot;:&quot;1&quot;,&#10;&#9;&quot;icon&quot;:&quot;1&quot;,&#10;&#9;&quot;parentId&quot;:&quot;-1&quot;,&#10;&#9;&quot;longitude&quot;:&quot;1&quot;,&#10;&#9;&quot;latitude&quot;:&quot;1&quot;,&#10;&#9;&quot;type&quot;:&quot;1&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8082/api/machine/saveMachine" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="AccessToken" />
+                <option name="value" value="amlqaWFuZ2t1bmFtbHFhV0Z1WjJ0MWJqRXlNelExTmc9PTAuMjA1MTIxNzU5NTM3NTI1NjU=" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8082/api/machine/saveMachine" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CsPublicComponentApplication">
+    <configuration name="Admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jjk.csauth.pojo.Admin" />
+      <module name="cs-auth" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jjk.csauth.pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -149,9 +297,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CsCarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cs-car" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="jjk.cscar.CsCarApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CsGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cs-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="jjk.csgateway.CsGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CsPublicComponentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cs-public-component" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="jjk.cspubliccomponent.CsPublicComponentApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,13 +341,23 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Admin" />
+      <item itemvalue="HTTP Request.generated-requests#1" />
+      <item itemvalue="HTTP Request.generated-requests#2" />
+      <item itemvalue="HTTP Request.generated-requests#3" />
       <item itemvalue="Spring Boot.CsAuthApplication" />
       <item itemvalue="Spring Boot.CsGatewayApplication" />
+      <item itemvalue="Spring Boot.CsCarApplication" />
+      <item itemvalue="Spring Boot.CsPublicComponentApplication" />
       <item itemvalue="Spring Boot.CsServerApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.CsServerApplication" />
+        <item itemvalue="HTTP Request.generated-requests#1" />
+        <item itemvalue="HTTP Request.generated-requests#2" />
+        <item itemvalue="HTTP Request.generated-requests#3" />
+        <item itemvalue="Application.Admin" />
       </list>
     </recent_temporary>
   </component>
@@ -297,6 +469,34 @@
       <workItem from="1587086253466" duration="7573000" />
       <workItem from="1587173314045" duration="3046000" />
       <workItem from="1587258741710" duration="2559000" />
+      <workItem from="1587351269233" duration="92000" />
+      <workItem from="1587953652532" duration="1243000" />
+      <workItem from="1588145785261" duration="601000" />
+      <workItem from="1588158664164" duration="702000" />
+      <workItem from="1588558814945" duration="8435000" />
+      <workItem from="1588680927481" duration="7226000" />
+      <workItem from="1588768617521" duration="3567000" />
+      <workItem from="1588813506988" duration="45000" />
+      <workItem from="1588814047551" duration="14729000" />
+      <workItem from="1588856452666" duration="5383000" />
+      <workItem from="1589962152985" duration="934000" />
+      <workItem from="1592541048004" duration="715000" />
+      <workItem from="1592562497148" duration="2435000" />
+      <workItem from="1592569301094" duration="7740000" />
+      <workItem from="1592621288591" duration="13769000" />
+      <workItem from="1592887281281" duration="945000" />
+      <workItem from="1593162496729" duration="3129000" />
+      <workItem from="1593229136152" duration="11736000" />
+      <workItem from="1593316071386" duration="1710000" />
+      <workItem from="1593319369726" duration="15983000" />
+      <workItem from="1593344046655" duration="15000" />
+      <workItem from="1593404367906" duration="292000" />
+      <workItem from="1593404679463" duration="7318000" />
+      <workItem from="1593491866906" duration="3438000" />
+      <workItem from="1593674911950" duration="76000" />
+      <workItem from="1594024899578" duration="8840000" />
+      <workItem from="1594092554218" duration="9381000" />
+      <workItem from="1594363875264" duration="79000" />
     </task>
     <servers />
   </component>
@@ -316,105 +516,101 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="852" y="263" width="422" height="513" key="#Assign_Data_Sources" timestamp="1584519413698">
+    <state x="842" y="381" key="#Notifications" timestamp="1588682898163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="852" y="263" width="422" height="513" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1584519413698" />
-    <state x="586" y="198" key="#Inspections" timestamp="1584521844388">
+    <state x="842" y="381" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1588682898163" />
+    <state x="440" y="94" key="#Project_Structure" timestamp="1593268234878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1584521844388" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587008795860">
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1593268234878" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592578626633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587008795860" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1586827992409">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592578626633" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1593338747052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586827992409" />
-    <state width="1877" height="252" key="GridCell.Tab.0.bottom" timestamp="1587284993477">
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593338747052" />
+    <state x="474" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592569136610">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993477" />
-    <state width="1877" height="252" key="GridCell.Tab.0.center" timestamp="1587284993477">
+    <state x="474" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592569136610" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588838106158">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993477" />
-    <state width="1877" height="252" key="GridCell.Tab.0.left" timestamp="1587284993476">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588838106158" />
+    <state width="1860" height="278" key="GridCell.Tab.0.bottom" timestamp="1594129167254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993476" />
-    <state width="1877" height="252" key="GridCell.Tab.0.right" timestamp="1587284993477">
+    <state width="1860" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
+    <state width="1860" height="278" key="GridCell.Tab.0.center" timestamp="1594129167254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993477" />
-    <state width="1877" height="252" key="GridCell.Tab.1.bottom" timestamp="1587284993121">
+    <state width="1860" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
+    <state width="1860" height="278" key="GridCell.Tab.0.left" timestamp="1594129167254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993121" />
-    <state width="1877" height="252" key="GridCell.Tab.1.center" timestamp="1587284993121">
+    <state width="1860" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
+    <state width="1860" height="278" key="GridCell.Tab.0.right" timestamp="1594129167254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993121" />
-    <state width="1877" height="252" key="GridCell.Tab.1.left" timestamp="1587284993120">
+    <state width="1860" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
+    <state width="1877" height="258" key="GridCell.Tab.1.bottom" timestamp="1594049389152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993120" />
-    <state width="1877" height="252" key="GridCell.Tab.1.right" timestamp="1587284993121">
+    <state width="1877" height="258" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
+    <state width="1877" height="258" key="GridCell.Tab.1.center" timestamp="1594049389152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993121" />
-    <state width="1877" height="252" key="GridCell.Tab.2.bottom" timestamp="1587284993121">
+    <state width="1877" height="258" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
+    <state width="1877" height="258" key="GridCell.Tab.1.left" timestamp="1594049389151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993121" />
-    <state width="1877" height="252" key="GridCell.Tab.2.center" timestamp="1587284993121">
+    <state width="1877" height="258" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389151" />
+    <state width="1877" height="258" key="GridCell.Tab.1.right" timestamp="1594049389152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993121" />
-    <state width="1877" height="252" key="GridCell.Tab.2.left" timestamp="1587284993121">
+    <state width="1877" height="258" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
+    <state width="1877" height="258" key="GridCell.Tab.2.bottom" timestamp="1594049389153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993121" />
-    <state width="1877" height="252" key="GridCell.Tab.2.right" timestamp="1587284993121">
+    <state width="1877" height="258" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389153" />
+    <state width="1877" height="258" key="GridCell.Tab.2.center" timestamp="1594049389152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="252" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587284993121" />
+    <state width="1877" height="258" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
+    <state width="1877" height="258" key="GridCell.Tab.2.left" timestamp="1594049389152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="258" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
+    <state width="1877" height="258" key="GridCell.Tab.2.right" timestamp="1594049389153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="258" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389153" />
     <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1587008419585">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1587008419585" />
-    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1584597764593">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1588561087168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584597764593" />
-    <state x="561" y="111" key="Registry" timestamp="1584515201662">
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588561087168" />
+    <state x="731" y="339" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588685311575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="561" y="111" key="Registry/0.0.1920.1040@0.0.1920.1040" timestamp="1584515201662" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1585554500111">
+    <state x="731" y="339" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588685311575" />
+    <state x="334" y="129" key="new project wizard" timestamp="1594025408098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585554500111" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586333440451">
+    <state x="334" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1594025408098" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1594096680616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586333440451" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594096680616" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594126824492">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594126824492" />
   </component>
 </project>

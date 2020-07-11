@@ -1,17 +1,14 @@
 package jjk.csutils.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 @Data
 @Accessors(chain = true)
-@MappedSuperclass
-public class Tree {
+public class Tree<T> {
     /**
      * 父id
      */
@@ -31,6 +28,12 @@ public class Tree {
      * 树路径
      */
     private String treePath;
+
+    /**
+     * 子节点
+     */
+    @TableField(exist = false)
+    private List<T> children;
 
     public void setParentId(Integer parentId) {
         if (null != parentId) {

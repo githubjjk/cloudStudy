@@ -1,13 +1,16 @@
 package jjk.csauth.service;
 
-import jjk.csauth.dao.AdminDao;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import jjk.csauth.dao.AdminMapper;
+import jjk.csauth.dao.RoleMapper;
 import jjk.csauth.pojo.Admin;
 import jjk.csauth.pojo.AdminRes;
 import jjk.csauth.pojo.Resource;
+import jjk.csauth.pojo.Role;
 import jjk.csutils.pojo.MyPage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,32 +27,41 @@ import java.util.Set;
 @Slf4j
 public class AdminService {
     @Autowired
-    private AdminDao adminDao;
+    private AdminMapper adminMapper;
     @Autowired
     private ResourceService resourceService;
+    @Autowired
+    private RoleMapper roleMapper;
 
     public MyPage<Admin> pageAdmin(MyPage<Admin> page) {
-        Sort sort = Sort.by(Sort.Direction.ASC, "id");
-        Pageable pageable = PageRequest.of(page.getCurrPage() - 1, page.getPageSize(), sort);
         Admin admin = page.getParam();
+        QueryWrapper<Admin> qw = new QueryWrapper<>();
         if (null != admin) {
-            ExampleMatcher em = ExampleMatcher.matching();
             if (null != admin.getUsername()) {
-                em = em.withMatcher("username", ExampleMatcher.GenericPropertyMatchers.contains());
+                qw.like("username", admin.getUsername());
             }
             if (null != admin.getName()) {
-                em = em.withMatcher("name", ExampleMatcher.GenericPropertyMatchers.contains());
+                qw.like("name", admin.getName());
             }
             if (null != admin.getPhone()) {
-                em = em.withMatcher("phone", ExampleMatcher.GenericPropertyMatchers.contains());
+                qw.like("phone", admin.getPhone());
             }
-            Example<Admin> example = Example.of(admin, em);
-            Page<Admin> all = adminDao.findAll(example, pageable);
-            MyPage prop = page.getProp(all);
-            return prop;
         }
-        Page<Admin> all = adminDao.findAll(Example.of(admin), pageable);
-        MyPage prop = page.getProp(all);
+        Page<Admin> adminPage = new Page<>(page.getCurrPage() - 1, page.getPageSize());
+        adminPage = adminMapper.selectPage(adminPage, qw);
+        List<Admin> records = adminPage.getRecords();
+        List<Role> roles = roleMapper.selectList(null);
+        for (Role role : roles) {
+            for (int i = 0; i < records.size(); i++) {
+                if (null != records.get(i).getRid()) {
+                    Integer rid = records.get(i).getRid();
+                    if (rid.intValue() == role.getRid().intValue()) {
+                        records.get(i).setRole(role);
+                    }
+                }
+            }
+        }
+        MyPage prop = page.getProp(adminPage.getRecords(), adminPage.getTotal(), adminPage.getPages());
         return prop;
     }
 

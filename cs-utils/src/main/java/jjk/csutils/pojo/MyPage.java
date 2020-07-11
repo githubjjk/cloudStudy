@@ -1,10 +1,7 @@
 package jjk.csutils.pojo;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 import lombok.experimental.Accessors;
-import net.minidev.json.annotate.JsonIgnore;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -34,9 +31,8 @@ public class MyPage<T> {
     /**
      * 总页数
      */
-    private Integer totalPage;
+    private Long totalPage;
 
-    @JsonIgnore
     private T param;
 
     public MyPage setCurrPage(Integer currPage) {
@@ -57,11 +53,11 @@ public class MyPage<T> {
         return this;
     }
 
-    public MyPage getProp(Page page){
-        if(null!=page){
-            this.data= page.getContent();
-            this.totalPage=page.getTotalPages();
-            this.totals=page.getTotalElements();
+    public MyPage getProp(List<T> records, long total, long pages) {
+        if (null != records) {
+            this.data = records;
+            this.totalPage = pages;
+            this.totals = total;
             return this;
         }
         return null;

@@ -1,15 +1,14 @@
 package jjk.csauth.service;
 
-import jjk.csauth.dao.ResourceDao;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import jjk.csauth.dao.ResourceMapper;
 import jjk.csauth.pojo.AdminRes;
 import jjk.csauth.pojo.Resource;
-import jjk.csutils.pojo.Tree;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -22,7 +21,7 @@ import java.util.Set;
 @Slf4j
 public class ResourceService {
     @Autowired
-    private ResourceDao resourceDao;
+    private ResourceMapper resourceMapper;
 
 
     /**
@@ -33,10 +32,12 @@ public class ResourceService {
      * @return
      */
     public String treePath(Integer parentId, Integer id) {
-        if (parentId.intValue() == 0) {
+        if (parentId.intValue() == -1) {
             return id + "";
         }
-        Resource one = resourceDao.getOne(parentId);
+        QueryWrapper<Resource> rq = new QueryWrapper<>();
+        rq.eq("id", parentId);
+        Resource one = resourceMapper.selectOne(rq);
         return one.getTreePath() + "#" + id;
     }
 
@@ -47,10 +48,12 @@ public class ResourceService {
      * @return
      */
     public Integer resLevel(Integer pid) {
-        if (pid.intValue() == 0) {
-            return 1;
+        if (pid.intValue() == -1) {
+            return 0;
         }
-        Resource one = resourceDao.getOne(pid);
+        QueryWrapper<Resource> rq = new QueryWrapper<>();
+        rq.eq("id", pid);
+        Resource one = resourceMapper.selectOne(rq);
         return one.getLevel() + 1;
     }
 

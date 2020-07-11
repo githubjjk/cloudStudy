@@ -7,18 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cs-utils" />
+        <module name="cs-public-component" />
+        <module name="cs-car" />
         <module name="cs-server" />
-        <module name="cs-auth" />
         <module name="cs-gateway" />
+        <module name="cs-auth" />
+        <module name="cs-utils" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cs-machine" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cs-auth" options="-parameters" />
+      <module name="cs-car" options="-parameters" />
       <module name="cs-gateway" options="-parameters" />
+      <module name="cs-machine" options="-parameters" />
+      <module name="cs-public-component" options="-parameters" />
       <module name="cs-server" options="-parameters" />
       <module name="cs-utils" options="-parameters" />
     </option>

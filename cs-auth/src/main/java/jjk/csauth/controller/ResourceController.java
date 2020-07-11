@@ -1,8 +1,8 @@
 package jjk.csauth.controller;
 
-import jjk.csauth.dao.ResourceDao;
-import jjk.csauth.dao.RoleDao;
-import jjk.csauth.pojo.Admin;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import jjk.csauth.dao.ResourceMapper;
+import jjk.csauth.dao.RoleMapper;
 import jjk.csauth.pojo.AdminRes;
 import jjk.csauth.pojo.Resource;
 import jjk.csauth.service.AdminService;
@@ -14,8 +14,6 @@ import jjk.csutils.service.JsonSwitch;
 import jjk.csutils.service.ObjectUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -34,13 +32,13 @@ import java.util.Set;
 @Slf4j
 public class ResourceController {
     @Autowired
-    private ResourceDao resourceDao;
+    private ResourceMapper resourceMapper;
     @Autowired
     private ResourceService resourceService;
     @Autowired
     private AdminService adminService;
     @Autowired
-    private RoleDao roleDao;
+    private RoleMapper roleMapper;
 
 
     /**
@@ -54,8 +52,12 @@ public class ResourceController {
         Resource res = JsonSwitch.getJavaObj(json, Resource.class);
         List<String> prop = ObjectUtils.setArrayList("name", "parentId", "enable", "type", "icon", "path");
         if (ObjectUtils.checkObjNotNull(res, (ArrayList<String>) prop)) {
-            boolean exists = resourceDao.exists(Example.of(res));
-            if (exists) {
+            QueryWrapper<Resource> rq = new QueryWrapper<>();
+            rq.eq("parent_id", res.getParentId());
+            rq.eq("name", res.getName());
+            rq.eq("enable", "0");
+            Integer exists = resourceMapper.selectCount(rq);
+            if (exists > 0) {
                 return new ErrorResult<>("资源已存在");
             }
             res.setLevel(resourceService.resLevel(res.getParentId()));
@@ -63,23 +65,22 @@ public class ResourceController {
             if (null != res.getId()) {
                 //更新
                 res.setTreePath(resourceService.treePath(res.getParentId(), res.getId()));
-                Resource saveRes = resourceDao.saveAndFlush(res);
-                adminRes.setId(saveRes.getId())
-                        .setPath(saveRes.getPath())
-                        .setLable(saveRes.getName())
-                        .setType(saveRes.getType())
-                        .setIcon(saveRes.getIcon());
+                resourceMapper.updateById(res);
+                adminRes.setId(res.getId())
+                        .setPath(res.getPath())
+                        .setLable(res.getName())
+                        .setType(res.getType())
+                        .setIcon(res.getIcon());
                 return new SuccessResult<>("修改成功", adminRes);
             }
             //新增
-            Resource res2 = resourceDao.saveAndFlush(res);
-            res2.setTreePath(resourceService.treePath(res2.getParentId(), res2.getId()));
-            Resource saveRes1 = resourceDao.saveAndFlush(res2);
-            adminRes.setId(saveRes1.getId())
-                    .setPath(saveRes1.getPath())
-                    .setLable(saveRes1.getName())
-                    .setType(saveRes1.getType())
-                    .setIcon(saveRes1.getIcon());
+            resourceMapper.insert(res);
+            res.setTreePath(resourceService.treePath(res.getParentId(), res.getId()));
+            adminRes.setId(res.getId())
+                    .setPath(res.getPath())
+                    .setLable(res.getName())
+                    .setType(res.getType())
+                    .setIcon(res.getIcon());
             return new SuccessResult<>("保存成功", adminRes);
         }
         return new ErrorResult<>("请求参数不能为空");
@@ -93,17 +94,11 @@ public class ResourceController {
      */
     @GetMapping("/deleteRes/{rid}")
     public ApiResult<String> deleteResource(@PathVariable Integer rid) {
-        Resource res = new Resource();
-        res.setParentId(rid);
-        Example<Resource> example = Example.of(res);
-        if (resourceDao.exists(example)) {
+        int count = resourceMapper.findResourceRelationById(rid);
+        if (count > 0) {
             return new ErrorResult<>("资源正在被使用");
         }
-        Resource resource = resourceDao.findById(rid).orElse(null);
-        if (null != resource.getRoles() && resource.getRoles().size() > 0) {
-            return new ErrorResult<>("资源正在被使用");
-        }
-        resourceDao.deleteById(rid);
+        resourceMapper.deleteById(rid);
         return new SuccessResult("删除成功");
     }
 
@@ -114,19 +109,20 @@ public class ResourceController {
      */
     @GetMapping("/findResTree")
     public ApiResult findResTree() {
-        Sort sort = Sort.by(Sort.Direction.ASC, "id");
-        List<Resource> all = resourceDao.findAll(sort);
+        QueryWrapper<Resource> rq = new QueryWrapper<>();
+        rq.orderByAsc("id");
+        List<Resource> all = resourceMapper.selectList(rq);
         Set<Resource> adminResSet = new HashSet<>();
         all.forEach(r -> adminResSet.add(r));
         AdminRes adminRes = new AdminRes();
-        adminRes.setId(0)
+        adminRes.setId(-1)
                 .setLable("菜单列表")
                 .setType("-1")
                 .setIcon("fa-icon")
                 .setTreePath("-1");
         Set<AdminRes> resTree = adminService.getResTree(adminResSet);
         adminRes.setChild(resTree);
-        Set<AdminRes> one=new HashSet<>();
+        Set<AdminRes> one = new HashSet<>();
         one.add(adminRes);
         return new SuccessResult<>("请求成功", one);
     }
@@ -138,9 +134,9 @@ public class ResourceController {
      */
     @GetMapping("/findNextRes/{parentId}")
     public ApiResult findNextRes(@PathVariable Integer parentId) {
-        Resource resource = new Resource();
-        resource.setParentId(parentId);
-        List<Resource> all = resourceDao.findAll(Example.of(resource));
+        QueryWrapper<Resource> rq = new QueryWrapper<>();
+        rq.eq("parent_id", parentId);
+        List<Resource> all = resourceMapper.selectList(rq);
         if (null != all && all.size() > 0) {
             ArrayList<AdminRes> adminRes = new ArrayList<>();
             for (int i = 0; i < all.size(); i++) {

@@ -39,6 +39,22 @@ public class RouteConfig {
                                 .filter(loginFilter))
                         .uri(PublicState.AUTH_MOUDLE)
                 )
+                .route("Car", p -> p
+                        .path("/api/carFun/**")
+                        .filters(f -> f
+                                .filter(logFilter)
+                                .filter(loginFilter)
+                                .stripPrefix(2))
+                        .uri(PublicState.CAR_MOUDLE)
+                )
+                .route("Public", p -> p
+                        .path("/api/pubFun/**")
+                        .filters(f -> f
+                                .filter(logFilter)
+                                .filter(loginFilter)
+                                .stripPrefix(2))
+                        .uri(PublicState.PUBLIC_COMPONTENT_MOUDLE)
+                )
                 .build();
     }
 }

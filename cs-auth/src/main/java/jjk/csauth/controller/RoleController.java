@@ -1,8 +1,9 @@
 package jjk.csauth.controller;
 
-import jjk.csauth.dao.AdminDao;
-import jjk.csauth.dao.ResourceDao;
-import jjk.csauth.dao.RoleDao;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import jjk.csauth.dao.AdminMapper;
+import jjk.csauth.dao.ResourceMapper;
+import jjk.csauth.dao.RoleMapper;
 import jjk.csauth.pojo.Admin;
 import jjk.csauth.pojo.AdminRes;
 import jjk.csauth.pojo.Resource;
@@ -18,7 +19,6 @@ import jjk.csutils.service.JsonSwitch;
 import jjk.csutils.service.ObjectUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -34,15 +34,15 @@ import java.util.*;
 @Slf4j
 public class RoleController {
     @Autowired
-    private RoleDao roleDao;
+    private RoleMapper roleMapper;
     @Autowired
-    private AdminDao adminDao;
+    private AdminMapper adminMapper;
     @Autowired
     private RoleService roleService;
     @Autowired
     private ResourceService resourceService;
     @Autowired
-    private ResourceDao resourceDao;
+    private ResourceMapper resourceMapper;
 
 
     /**
@@ -56,11 +56,14 @@ public class RoleController {
         Role role = JsonSwitch.getJavaObj(json, Role.class);
         List<String> save = ObjectUtils.setArrayList("rname", "enable", "rsign");
         if (ObjectUtils.checkObjNotNull(role, (ArrayList<String>) save)) {
-            List<Role> list = roleDao.findByRnameOrRsign(role.getRname(), role.getRsign());
-            if (null != list && list.size() > 0) {
+            QueryWrapper<Role> rq = new QueryWrapper<>();
+            rq.eq("rname", role.getRname());
+            rq.eq("enable", "0");
+            Integer count = roleMapper.selectCount(rq);
+            if (count > 0) {
                 return new ErrorResult<>("角色已存在");
             }
-            roleDao.saveAndFlush(role);
+            role.insertOrUpdate();
             return new SuccessResult("保存成功");
         }
         return new ErrorResult<>("请求参数不能为空");
@@ -87,11 +90,13 @@ public class RoleController {
      */
     @GetMapping("/deleteRole/{rid}")
     public ApiResult deleteRole(@PathVariable Integer rid) {
-        boolean admin = adminDao.exists(Example.of(new Admin().setRole(new Role().setRid(rid))));
-        if (admin) {
+        QueryWrapper<Admin> aq = new QueryWrapper<>();
+        aq.eq("rid", rid);
+        Integer count = adminMapper.selectCount(aq);
+        if (null != count && count > 0) {
             return new ErrorResult("角色正在被使用！！");
         }
-        roleDao.deleteById(rid);
+        roleMapper.deleteById(rid);
         return new SuccessResult("删除成功");
     }
 
@@ -106,16 +111,12 @@ public class RoleController {
         RoleResourceId javaObj = JsonSwitch.getJavaObj(json, RoleResourceId.class);
         List<String> props = ObjectUtils.setArrayList("rid", "resId");
         if (ObjectUtils.checkObjNotNull(javaObj, (ArrayList<String>) props)) {
-            Role role = roleDao.findById(javaObj.getRid()).orElse(null);
-            if(null==role){
+            Role role = roleMapper.selectById(javaObj.getRid());
+            if (null == role) {
                 return new ErrorResult<>("角色不存在！");
             }
-            Set<Resource> updateRes=new HashSet<>();
-            javaObj.getResId().forEach(r -> {
-                updateRes.add(resourceDao.getOne(r));
-            });
-            role.setRlist(updateRes);
-            roleDao.save(role);
+            roleMapper.deleteRoleRes(javaObj.getRid());
+            roleMapper.insertRoleAndRes(javaObj.getRid(), javaObj.getResId());
             return new SuccessResult("保存成功");
         }
         return new ErrorResult("参数不能为空！！");
@@ -130,8 +131,8 @@ public class RoleController {
     @GetMapping("/findRoleResTree/{rid}")
     public ApiResult findRoleResTree(@PathVariable Integer rid) {
         Map<String, Object> result = new HashMap<>();
-        Role role = roleDao.findById(rid).orElse(null);
-        List<Resource> all = resourceDao.findAll();
+        Role role = roleMapper.findRoleById(rid);
+        List<Resource> all = resourceMapper.selectList(null);
         HashSet<Resource> resSet = new HashSet<>();
         all.forEach(res -> resSet.add(res));
         Set<AdminRes> tree = resourceService.getTree(resSet);
@@ -140,11 +141,11 @@ public class RoleController {
             Set<Resource> rlist = role.getRlist();
             if (rlist != null && rlist.size() > 0) {
                 List<Integer> rids = new ArrayList<>();
-                rlist.forEach(res -> {
-                    if (res.getLevel().intValue() == 2 && res.getType().contains("2")) {
-                        rids.add(res.getId());
+                for (Resource r : rlist) {
+                    if (r.getType().equals("2")) {
+                        rids.add(r.getId());
                     }
-                });
+                }
                 result.put("rids", rids);
                 return new SuccessResult<>("请求成功", result);
             }

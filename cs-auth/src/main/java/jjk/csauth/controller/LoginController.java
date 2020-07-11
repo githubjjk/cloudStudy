@@ -1,7 +1,7 @@
 package jjk.csauth.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import jjk.csauth.dao.LoginDao;
+import jjk.csauth.dao.AdminMapper;
 import jjk.csauth.pojo.Admin;
 import jjk.csutils.pojo.ApiResult;
 import jjk.csutils.pojo.ErrorResult;
@@ -10,7 +10,6 @@ import jjk.csutils.service.JsonSwitch;
 import jjk.csutils.service.RedisService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,7 +32,7 @@ public class LoginController {
     @Autowired
     private RedisService redisService;
     @Autowired
-    private LoginDao loginDao;
+    private AdminMapper adminMapper;
 
     /**
      * 登录
@@ -45,10 +44,10 @@ public class LoginController {
     public ApiResult<String> login(@RequestBody String json) {
         Admin admin = JsonSwitch.getJavaObj(json, Admin.class);
         if (null != admin) {
-            Admin nowAdmin = loginDao.findOne(Example.of(admin.setEnable("0"))).orElse(null);
+            Admin nowAdmin = adminMapper.findAdminByUP(admin.getUsername(), admin.getPassword());
             String token = "";
             if (null != nowAdmin) {
-                if(null==nowAdmin.getRole()){
+                if (null == nowAdmin.getRole()) {
                     return new ErrorResult<>("未授权,请联系管理员！");
                 }
                 try {
@@ -57,6 +56,7 @@ public class LoginController {
                     return new SuccessResult("请求成功", token);
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
+                    return new ErrorResult("用户名密码错误");
                 }
             }
             return new ErrorResult("用户名密码错误");

@@ -1,5 +1,7 @@
 {
   "cs-auth":8081,
   "cs-server":8888,
-  "cs-gateway":8082
+  "cs-gateway":8082,
+  "cs-car":8083,
+  "cs-public-component": 8084
 }

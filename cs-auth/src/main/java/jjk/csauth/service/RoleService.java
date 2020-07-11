@@ -1,10 +1,12 @@
 package jjk.csauth.service;
 
-import jjk.csauth.dao.RoleDao;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import jjk.csauth.dao.RoleMapper;
 import jjk.csauth.pojo.Role;
 import jjk.csutils.pojo.MyPage;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,20 +18,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class RoleService {
     @Autowired
-    private RoleDao roleDao;
+    private RoleMapper roleMapper;
 
-
-    public MyPage<Role> pageRole(MyPage<Role> page){
-        Sort sort=Sort.by(Sort.Direction.ASC,"rid");
-        Pageable pageable=PageRequest.of(page.getCurrPage()-1,page.getPageSize(),sort);
-        if(null!=page.getParam()){
-            ExampleMatcher em=ExampleMatcher.matching().withMatcher("rname",ExampleMatcher.GenericPropertyMatchers.contains());
-            Example<Role> of = Example.of(page.getParam(), em);
-            Page<Role> pageRole = roleDao.findAll(of, pageable);
-            MyPage prop = page.getProp(pageRole);
-            return prop;
+    public MyPage<Role> pageRole(MyPage<Role> page) {
+        Page<Role> rolePage = new Page<>(page.getCurrPage() - 1, page.getPageSize());
+        QueryWrapper<Role> rq = new QueryWrapper<>();
+        if (StringUtils.isNotEmpty(page.getParam().getRname())) {
+            rq.like("rname", page.getParam().getRname());
         }
-        MyPage prop2 = page.getProp(roleDao.findAll(pageable));
-        return prop2;
+        rq.eq("enable", "0");
+        rolePage = roleMapper.selectPage(rolePage, rq);
+        MyPage prop = page.getProp(rolePage.getRecords(), rolePage.getTotal(), rolePage.getPages());
+        return prop;
     }
 }
