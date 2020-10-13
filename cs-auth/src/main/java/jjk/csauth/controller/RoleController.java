@@ -135,18 +135,40 @@ public class RoleController {
         List<Resource> all = resourceMapper.selectList(null);
         HashSet<Resource> resSet = new HashSet<>();
         all.forEach(res -> resSet.add(res));
-        Set<AdminRes> tree = resourceService.getTree(resSet);
+        Set<AdminRes> tree = resourceService.getTree(resSet, "1");
         result.put("tree", tree);
         if (null != role) {
             Set<Resource> rlist = role.getRlist();
             if (rlist != null && rlist.size() > 0) {
-                List<Integer> rids = new ArrayList<>();
+                List<Integer> btns = new ArrayList<>();
+                List<Resource> pathList = new ArrayList<>();
+                List<Resource> btnList = new ArrayList<>();
                 for (Resource r : rlist) {
                     if (r.getType().equals("2")) {
-                        rids.add(r.getId());
+                        btns.add(r.getId());
+                        btnList.add(r);
+                    }
+                    if (r.getType().equals("1")) {
+                        pathList.add(r);
                     }
                 }
-                result.put("rids", rids);
+                List<Integer> btns2 = new ArrayList<>();
+                for (Resource route : pathList) {
+                    boolean sign = false;
+                    for (Resource btn : btnList) {
+                        if (route.getId().intValue() == btn.getParentId().intValue()) {
+                            sign = false;
+                            break;
+                        } else {
+                            sign = true;
+                        }
+                    }
+                    if (sign) {
+                        btns2.add(route.getId());
+                    }
+                }
+                btns.addAll(btns2);
+                result.put("rids", btns);
                 return new SuccessResult<>("请求成功", result);
             }
         }

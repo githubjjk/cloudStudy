@@ -56,6 +56,7 @@ public class ResourceController {
             rq.eq("parent_id", res.getParentId());
             rq.eq("name", res.getName());
             rq.eq("enable", "0");
+            rq.ne("id", res.getId());
             Integer exists = resourceMapper.selectCount(rq);
             if (exists > 0) {
                 return new ErrorResult<>("资源已存在");
@@ -76,11 +77,13 @@ public class ResourceController {
             //新增
             resourceMapper.insert(res);
             res.setTreePath(resourceService.treePath(res.getParentId(), res.getId()));
+            resourceMapper.updateById(res);
             adminRes.setId(res.getId())
                     .setPath(res.getPath())
                     .setLable(res.getName())
                     .setType(res.getType())
                     .setIcon(res.getIcon());
+
             return new SuccessResult<>("保存成功", adminRes);
         }
         return new ErrorResult<>("请求参数不能为空");

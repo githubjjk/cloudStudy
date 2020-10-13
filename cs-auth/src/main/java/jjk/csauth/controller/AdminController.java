@@ -123,7 +123,7 @@ public class AdminController {
             Map<String, Object> map = new HashMap<>();
             String val = redisService.getVal(key.toString());
             Admin admin = JSONObject.parseObject(val, Admin.class);
-            Set<AdminRes> resTree = adminService.getResTree(admin.getRole().getRlist());
+            Set<AdminRes> resTree = adminService.getNavTree(admin.getRole().getRlist());
             List<String> perBtn = adminService.getPerBtn(admin.getRole().getRlist());
             map.put("resList", resTree);
             map.put("perBtn", perBtn);

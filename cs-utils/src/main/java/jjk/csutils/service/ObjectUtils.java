@@ -32,7 +32,7 @@ public class ObjectUtils {
                     all.addAll(Arrays.asList(obj.getClass().getSuperclass().getDeclaredFields()));
                     for (String key : args) {
                         for (Field f : all) {
-                            if (key.contains(f.getName())){
+                            if (key.equals(f.getName())){
                                 f.setAccessible(true);
                                 if (null == f.get(obj) || f.get(obj).equals("")) {
                                     flag = false;

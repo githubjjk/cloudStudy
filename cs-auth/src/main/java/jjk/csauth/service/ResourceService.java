@@ -61,9 +61,10 @@ public class ResourceService {
      * 获取树集合
      *
      * @param list
+     * @param routeOrBtn 0获取路由级别，1获取按钮及路由级别
      * @return
      */
-    public Set<AdminRes> getTree(Set<Resource> list) {
+    public Set<AdminRes> getTree(Set<Resource> list, String routeOrBtn) {
         if (null != list && list.size() > 0) {
             Set<AdminRes> menu = new HashSet<>();
             Set<AdminRes> path = new HashSet<>();
@@ -77,12 +78,21 @@ public class ResourceService {
                         .setType(res.getType());
                 ar.setParentId(res.getParentId());
                 ar.setId(res.getId());
-                if (res.getLevel() == 0) {
-                    menu.add(ar);
-                } else if (res.getLevel() == 1) {
-                    path.add(ar);
-                } else if (res.getLevel() == 2) {
-                    button.add(ar);
+                //在这里进行分类
+                if (routeOrBtn.equals("0")) {
+                    if (res.getLevel() == 0 && res.getType().equals("0")) {
+                        menu.add(ar);
+                    } else if (res.getLevel() == 1 && res.getType().equals("1")) {
+                        path.add(ar);
+                    }
+                } else if (routeOrBtn.equals("1")) {
+                    if (res.getLevel() == 0 && res.getType().equals("0")) {
+                        menu.add(ar);
+                    } else if (res.getLevel() == 1) {
+                        path.add(ar);
+                    } else {
+                        button.add(ar);
+                    }
                 }
             }
             //组合树

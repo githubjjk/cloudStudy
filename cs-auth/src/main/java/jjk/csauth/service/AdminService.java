@@ -66,13 +66,13 @@ public class AdminService {
     }
 
     /**
-     * 获取用户资源树
+     * 获取用户资源树（只到路由级别）
      *
      * @param rlist
      * @return
      */
-    public Set<AdminRes> getResTree(Set<Resource> rlist) {
-        return resourceService.getTree(rlist);
+    public Set<AdminRes> getNavTree(Set<Resource> rlist) {
+        return resourceService.getTree(rlist, "0");
     }
 
     /**
@@ -92,5 +92,15 @@ public class AdminService {
             return list;
         }
         return null;
+    }
+
+    /**
+     * 获取用户资源树（按钮级别）
+     *
+     * @param adminResSet
+     * @return
+     */
+    public Set<AdminRes> getResTree(Set<Resource> adminResSet) {
+        return resourceService.getTree(adminResSet, "1");
     }
 }

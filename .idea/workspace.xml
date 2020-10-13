@@ -20,35 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd9cc501-79da-41fd-a5cd-e7b95fcd644d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/ResourceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/LoginDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/ResourceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/ResourceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/dao/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/pojo/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/ResourceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/java/jjk/csauth/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-auth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-auth/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/config/RouteConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/config/RouteConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/constants/PublicState.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/java/jjk/csgateway/constants/PublicState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/MyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/MyPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ApiResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/pojo/ApiResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/JsonSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/JsonSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/ObjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/cs-utils/src/main/java/jjk/csutils/service/ObjectUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/port.json" beforeDir="false" afterPath="$PROJECT_DIR$/port.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +43,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
-        <option value="Class" />
+        <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,14 +97,14 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\项目\javaProject\cloudStudy\cs-public-component\src\main\java\jjk\cspubliccomponent\config" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="jjk.csutils.service.serviceImpl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="jjk.cspubliccomponent.webSocket" />
@@ -131,8 +113,8 @@
       <recent name="jjk.cscar.config" />
       <recent name="jjk.csauth.config" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="jjk.csutils.service.serviceImpl" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\项目\javaProject\cloudStudy\cs-public-component\src\main\java\jjk\cspubliccomponent\config" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -251,20 +233,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.CsPublicComponentApplication">
-    <configuration name="Admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jjk.csauth.pojo.Admin" />
-      <module name="cs-auth" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jjk.csauth.pojo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -341,7 +309,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Admin" />
       <item itemvalue="HTTP Request.generated-requests#1" />
       <item itemvalue="HTTP Request.generated-requests#2" />
       <item itemvalue="HTTP Request.generated-requests#3" />
@@ -357,7 +324,6 @@
         <item itemvalue="HTTP Request.generated-requests#1" />
         <item itemvalue="HTTP Request.generated-requests#2" />
         <item itemvalue="HTTP Request.generated-requests#3" />
-        <item itemvalue="Application.Admin" />
       </list>
     </recent_temporary>
   </component>
@@ -497,6 +463,19 @@
       <workItem from="1594024899578" duration="8840000" />
       <workItem from="1594092554218" duration="9381000" />
       <workItem from="1594363875264" duration="79000" />
+      <workItem from="1594459544128" duration="5944000" />
+      <workItem from="1594612914733" duration="5563000" />
+      <workItem from="1594867360652" duration="14954000" />
+      <workItem from="1594973815195" duration="25304000" />
+      <workItem from="1595130838114" duration="609000" />
+      <workItem from="1595315865711" duration="13000" />
+      <workItem from="1595401266158" duration="6389000" />
+      <workItem from="1595559952093" duration="17565000" />
+      <workItem from="1595751051649" duration="13075000" />
+      <workItem from="1595817835578" duration="12043000" />
+      <workItem from="1598930739533" duration="8409000" />
+      <workItem from="1599017321033" duration="15199000" />
+      <workItem from="1599120011228" duration="707000" />
     </task>
     <servers />
   </component>
@@ -516,90 +495,90 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="842" y="381" key="#Notifications" timestamp="1588682898163">
+    <state x="586" y="198" key="#Inspections" timestamp="1594545876216">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="842" y="381" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1588682898163" />
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1594545876216" />
     <state x="440" y="94" key="#Project_Structure" timestamp="1593268234878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1593268234878" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592578626633">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595844213209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592578626633" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1593338747052">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595844213209" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1599053174388">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593338747052" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599053174388" />
+    <state x="713" y="386" width="494" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594524420937">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="386" width="494" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1594524420937" />
     <state x="474" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592569136610">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="474" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592569136610" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588838106158">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599049784218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588838106158" />
-    <state width="1860" height="278" key="GridCell.Tab.0.bottom" timestamp="1594129167254">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599049784218" />
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1599053046981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
-    <state width="1860" height="278" key="GridCell.Tab.0.center" timestamp="1594129167254">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599053046981" />
+    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1599053046981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
-    <state width="1860" height="278" key="GridCell.Tab.0.left" timestamp="1594129167254">
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599053046981" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1599053046981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
-    <state width="1860" height="278" key="GridCell.Tab.0.right" timestamp="1594129167254">
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599053046981" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1599053046981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594129167254" />
-    <state width="1877" height="258" key="GridCell.Tab.1.bottom" timestamp="1594049389152">
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599053046981" />
+    <state width="1877" height="253" key="GridCell.Tab.1.bottom" timestamp="1599052995726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
-    <state width="1877" height="258" key="GridCell.Tab.1.center" timestamp="1594049389152">
+    <state width="1877" height="253" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599052995726" />
+    <state width="1877" height="253" key="GridCell.Tab.1.center" timestamp="1599052995726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
-    <state width="1877" height="258" key="GridCell.Tab.1.left" timestamp="1594049389151">
+    <state width="1877" height="253" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599052995726" />
+    <state width="1877" height="253" key="GridCell.Tab.1.left" timestamp="1599052995726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389151" />
-    <state width="1877" height="258" key="GridCell.Tab.1.right" timestamp="1594049389152">
+    <state width="1877" height="253" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599052995726" />
+    <state width="1877" height="253" key="GridCell.Tab.1.right" timestamp="1599052995726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
-    <state width="1877" height="258" key="GridCell.Tab.2.bottom" timestamp="1594049389153">
+    <state width="1877" height="253" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599052995726" />
+    <state width="1877" height="253" key="GridCell.Tab.2.bottom" timestamp="1599052430170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389153" />
-    <state width="1877" height="258" key="GridCell.Tab.2.center" timestamp="1594049389152">
+    <state width="1877" height="253" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599052430170" />
+    <state width="1877" height="253" key="GridCell.Tab.2.center" timestamp="1599052430170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
-    <state width="1877" height="258" key="GridCell.Tab.2.left" timestamp="1594049389152">
+    <state width="1877" height="253" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599052430170" />
+    <state width="1877" height="253" key="GridCell.Tab.2.left" timestamp="1599052430170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389152" />
-    <state width="1877" height="258" key="GridCell.Tab.2.right" timestamp="1594049389153">
+    <state width="1877" height="253" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599052430170" />
+    <state width="1877" height="253" key="GridCell.Tab.2.right" timestamp="1599052430170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="258" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594049389153" />
-    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1587008419585">
+    <state width="1877" height="253" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599052430170" />
+    <state x="490" y="174" key="Maven.ArtifactSearchDialog" timestamp="1599019561001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1587008419585" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1588561087168">
+    <state x="490" y="174" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599019561001" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1599019370148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588561087168" />
-    <state x="731" y="339" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588685311575">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="731" y="339" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588685311575" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1599019370148" />
     <state x="334" y="129" key="new project wizard" timestamp="1594025408098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -608,9 +587,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594096680616" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594126824492">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598969062982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594126824492" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598969062982" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cs-public-component/src/main/java/jjk/cspubliccomponent/config/MsgSendCallBackConfirm.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="java.util.HashMap$Node" fieldName="key" />
+        <PinnedItemInfo typeName="java.util.HashMap$Node" fieldName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

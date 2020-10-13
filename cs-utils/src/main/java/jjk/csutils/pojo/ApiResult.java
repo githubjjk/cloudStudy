@@ -1,6 +1,7 @@
 package jjk.csutils.pojo;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
@@ -11,6 +12,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
+@NoArgsConstructor
 public class ApiResult<T> {
     //状态
     private int state;

@@ -53,6 +53,10 @@
                 <redis.timeout>60000</redis.timeout>
                 <eureka.ipaddr>127.0.0.1</eureka.ipaddr>
                 <eureka.defaultZone>http://127.0.0.1:8888/eureka/</eureka.defaultZone>
+                <rabbit.host>127.0.0.1</rabbit.host>
+                <rabbit.port>5672</rabbit.port>
+                <rabbit.username>jjkmq</rabbit.username>
+                <rabbit.password>jjkmq123456</rabbit.password>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>

@@ -1,5 +1,6 @@
 package jjk.csutils.service;
 
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import jjk.csutils.pojo.MyPage;
@@ -32,8 +33,8 @@ public class JsonSwitch {
 
     public static <T> MyPage<T> getPage(String json, Class<T> t) {
         JSONObject jsonObject = JSONObject.parseObject(json);
-        Integer pageSize = Integer.parseInt((String) jsonObject.get("pageSize"));
-        Integer currPage = Integer.parseInt((String) jsonObject.get("currPage"));
+        Integer pageSize = Integer.parseInt((String) jsonObject.getString("pageSize"));
+        Integer currPage = Integer.parseInt((String) jsonObject.getString("currPage"));
         String param = jsonObject.get("param").toString();
         T paramObj = JSON.parseObject(param, t);
         MyPage myPage = new MyPage<T>().setCurrPage(currPage).setPageSize(pageSize).setParam(paramObj);
@@ -64,10 +65,10 @@ public class JsonSwitch {
      * @param key
      * @return
      */
-    public static Object getJsonByKey(String json, String key) {
+    public static String getJsonByKey(String json, String key) {
         JSONObject jsonObject = JSONObject.parseObject(json);
-        Object o = jsonObject.get(key);
-        return o;
+        String value = jsonObject.getString(key);
+        return value;
     }
 
     /**
